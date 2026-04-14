@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurSun | Burning Sun</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000000; color: #f0f0f0; font-family: 'Segoe UI', 'Courier New', monospace; line-height: 1.6; }
+        .wrapper { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 30px 0 20px; border-bottom: 3px solid #b22222; }
+        h1 { font-size: 3.5em; letter-spacing: 4px; color: #b22222; text-shadow: 3px 3px 0 #ffffff30; }
+        .sub { font-size: 1.2em; color: #cccccc; margin-top: 5px; }
+        nav { margin: 25px 0; text-align: center; }
+        nav a { color: #ffffff; text-decoration: none; font-weight: bold; margin: 0 15px; padding: 6px 12px; border: 1px solid #b22222; border-radius: 30px; transition: 0.3s; display: inline-block; }
+        nav a:hover { background: #b22222; color: #000; border-color: #fff; box-shadow: 0 0 8px red; }
+        .social-links { text-align: center; margin: 20px 0 10px; }
+        .social-links a { color: #b22222; text-decoration: none; font-weight: bold; margin: 0 12px; font-size: 1.1em; border-bottom: 1px dashed #b22222; }
+        .social-links a:hover { color: #fff; border-bottom-color: #fff; }
+        main { background: #0a0a0a; padding: 25px; border-left: 2px solid #b22222; border-right: 2px solid #b22222; margin: 20px 0; }
+        footer { text-align: center; font-size: 0.8em; color: #555; border-top: 1px solid #b22222; padding-top: 20px; margin-top: 20px; }
+        .member { margin: 12px 0; border-left: 4px solid #b22222; padding-left: 15px; }
+        .member strong { font-size: 1.2em; }
+        ul { list-style: none; padding-left: 0; }
+        ul.albums { list-style-type: square; padding-left: 25px; }
+        .contacts-list li { margin-bottom: 10px; }
+        a { color: #b22222; }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>BurSun</h1>
+        <div class="sub">Burning Sun (Горящее солнце)</div>
+    </header>
+    <nav>
+        <a href="#" onclick="showPage('home')">Главная</a>
+        <a href="#" onclick="showPage('band')">Участники</a>
+        <a href="#" onclick="showPage('music')">Музыка</a>
+        <a href="#" onclick="showPage('merch')">Мерч</a>
+        <a href="#" onclick="showPage('contacts')">Контакты</a>
+    </nav>
+    <div class="social-links">
+        🎸 VK: <a href="https://vk.ru/bursunofficial" target="_blank">vk.com/bursunofficial</a>   |  
+        📱 Telegram: <a href="https://t.me/bursungroup" target="_blank">t.me/bursungroup</a>
+    </div>
+    <main id="content">
+        <!-- Контент будет загружаться сюда -->
+    </main>
+    <footer>
+        BurSun — горящее солнце тяжёлого металла 🤘 | 
+    </footer>
+</div>
+
+<script>
+    function showPage(page) {
+        const contentDiv = document.getElementById('content');
+        if (page === 'home') {
+            contentDiv.innerHTML = `
+                <h2 style="color:#b22222;">⚡ Добро пожаловать в Burning Sun ⚡</h2>
+                <p>Всем привет солдаты! На связи -<strong>☀️  BurSun  ☀️</strong>.</p>
+                <p><strong>BurSun</strong> — это энергия горящего солнца, переплавленная в тяжёлые риффы и агрессивный драйв. Мы играем современный метал🤘.</p>
+                <p>🔥 Новый сингл: </p>
+                <p>🎤 Ближайший концерт: </p>
+                <p>Следи за новостями в наших соцсетях — ссылки вверху страницы.</p>
+            `;
+        } else if (page === 'band') {
+            contentDiv.innerHTML = `
+                <h2 style="color:#b22222;">🔥 Участники группы 🔥</h2>
+                <ul>
+                    <li class="member"><strong>Стёпа Федоренко</strong> — Гитара <a href="https://vk.ru/anyagio" target="_blank">-🎸-Металлический Диско-шар, главный по риффам.-🎸-</a></li>
+                    <li class="member"><strong>Роман Яценко</strong> — Ударные <a href="https://vk.ru/id949084635" target="_blank">-🥁-Идейный вдохновитель, заведующий ритмом.-🥁-</a></li>
+                    <li class="member"><strong>Илья Савчук</strong> — Гитара <a href="https://vk.ru/lord_7567" target="_blank">-🎸-Гитарист, главнй продажник.-🎸-</a></li>
+                    <li class="member"><strong>Захар Табушщиков</strong> — Вокал <a href="https://vk.ru/outssiderrr" target="_blank">-🎤-Главный Горлопан, ультракрикун.-🎤-</a></li>
+                    <li class="member"><strong>Игорь Кудрявцев</strong> — Бас <a href="https://vk.ru/kudr9vcev_irrr" target="_blank">-🎸-Сигма-мен, Повелитель низких частот.-🎸-</a></li>
+                </ul>
+                <p><em>«Каждый из нас — частица раскалённого светила»</em></p>
+            `;
+        } else if (page === 'music') {
+            contentDiv.innerHTML = `
+                <h2 style="color:#b22222;">🎵 Дискография 🎵</h2>
+                <ul class="albums">
+                    <li><strong></strong> </li>
+                    <li><strong></strong> </li>
+                </ul>
+                <p>🎧 Слушать на цифровых площадках (скоро):<br>
+                 | <a href="#">VK Музыка</a> | <a href="#">Яндекс.Музыка</a>
+                </p>
+            `;
+        } else if (page === 'merch') {
+            contentDiv.innerHTML = `
+                <h2 style="color:#b22222;">🧷 фирменные метал безделушки 🧷</h2>
+                <ul class="things">
+                    <li><strong>-------скоро--------------скоро--------------скоро--------------скоро--------------скоро--------------скоро--------------скоро-------</strong> </li>
+                    <li><strong></strong> </li>
+                </p>
+            `;
+        } else if (page === 'contacts') {
+            contentDiv.innerHTML = `
+                <h2 style="color:#b22222;">📬 Контакты </h2>
+                <p>По вопросам выступлений, интервью и сотрудничества:</p>
+                <ul class="contacts-list">
+                    <li>📧 Email: <a href="mailto:"></a></li>
+                    <li>📱 Telegram: <a href="https://t.me/bursungroup" target="_blank">@bursungroup</a></li>
+                    <li>🔗 VK: <a href="https://vk.ru/bursunofficial" target="_blank">vk.com/bursunofficial</a></li>
+                </ul>
+                <p>Менеджмент: +0 (000) 000-00-00 </p>
+            `;
+        }
+    }
+
+    // Показываем главную страницу при загрузке
+    showPage('home');
+</script>
+</body>
+</html>
